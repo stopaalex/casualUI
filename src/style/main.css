@@ -60,8 +60,6 @@ button.cui-button {
     opacity: 0; } }
 
 .cui-container {
-  display: flex;
-  flex-direction: column;
   padding: .5em;
   margin: .5em; }
   .cui-container.text {
@@ -74,13 +72,14 @@ button.cui-button {
   .cui-container.border-white {
     border: 1px solid #FFFFFF; }
   .cui-container.horizontal {
+    display: flex;
     flex-direction: row; }
-  .cui-container.left {
-    justify-content: flex-start; }
-  .cui-container.center {
-    justify-content: center; }
-  .cui-container.right {
-    justify-content: flex-end; }
+    .cui-container.horizontal.left {
+      justify-content: flex-start; }
+    .cui-container.horizontal.center {
+      justify-content: center; }
+    .cui-container.horizontal.right {
+      justify-content: flex-end; }
 
 .cui-header {
   margin: .05em .15em;
