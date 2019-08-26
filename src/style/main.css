@@ -1,0 +1,99 @@
+button.cui-button {
+  position: relative;
+  margin: .5em;
+  border: 1px solid transparent;
+  outline: none;
+  padding: .5em 1em;
+  cursor: pointer;
+  overflow: hidden;
+  background: #1acd67;
+  color: #ffffff; }
+  button.cui-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0; }
+  button.cui-button:focus:not(:active)::after {
+    animation: pulse 0.7s ease-in-out 1; }
+  button.cui-button:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); }
+  button.cui-button.rounded {
+    border-radius: 4px; }
+  button.cui-button.alt {
+    background: transparent;
+    border: 1px solid #1acd67;
+    color: #000000; }
+  button.cui-button.alt::After {
+    background: rgba(0, 0, 0, 0.15); }
+  button.cui-button.icon {
+    border-radius: 100%;
+    padding: .5em .55em; }
+    button.cui-button.icon i {
+      width: 16px;
+      height: 16px; }
+  button.cui-button.clear {
+    background: transparent;
+    border: 1px solid transparent; }
+    button.cui-button.clear::after {
+      background: rgba(0, 0, 0, 0.15); }
+    button.cui-button.clear.red {
+      color: red; }
+    button.cui-button.clear.green {
+      color: green; }
+    button.cui-button.clear.blue {
+      color: blue; }
+
+@keyframes pulse {
+  0% {
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0; }
+  40% {
+    clip-path: circle(100% at 50% 50%);
+    opacity: 1; }
+  100% {
+    clip-path: circle(100% at 50% 50%);
+    opacity: 0; } }
+
+.cui-container {
+  display: flex;
+  flex-direction: column;
+  padding: .5em;
+  margin: .5em; }
+  .cui-container.text {
+    margin: .05em 0.25em;
+    padding: .05em 0.25em; }
+  .cui-container.border-black {
+    border: 1px solid #000000; }
+  .cui-container.border-grey {
+    border: 1px solid #CCCCCC; }
+  .cui-container.border-white {
+    border: 1px solid #FFFFFF; }
+  .cui-container.horizontal {
+    flex-direction: row; }
+  .cui-container.left {
+    justify-content: flex-start; }
+  .cui-container.center {
+    justify-content: center; }
+  .cui-container.right {
+    justify-content: flex-end; }
+
+.cui-header {
+  margin: .05em .15em;
+  font-size: 1.2em;
+  text-decoration: underline; }
+  .cui-header.medium {
+    font-size: 1.275em; }
+  .cui-header.large {
+    font-size: 1.35em; }
+
+.cui-subheader {
+  margin: .05em .25em .25em .25em; }
+
+* {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 16px; }

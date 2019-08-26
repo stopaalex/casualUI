@@ -1,0 +1,21 @@
+
+// Your primary color goes here
+//
+$primary-color: #1acd67;
+// $primary-color: #ccc;
+
+// Your secondary color goes here
+//
+$secondary-color: #1acd67;
+
+
+// SASS functions
+//
+
+@function set-text-color($color) {
+    @if (lightness($color) > 50) {
+        @return #000000;
+    } @else {
+        @return #ffffff;
+    }
+}

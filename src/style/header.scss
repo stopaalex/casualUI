@@ -1,0 +1,20 @@
+@import 'variables.scss';
+
+.cui-header {
+    margin: .05em .15em;
+    font-size: 1.2em;
+    text-decoration: underline;
+
+    &.medium {
+        font-size: 1.275em;
+    }
+
+    &.large {
+        font-size: 1.35em;
+    }
+}
+
+.cui-subheader {
+    margin: .05em .25em .25em .25em;
+
+}

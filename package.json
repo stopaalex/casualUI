@@ -1,0 +1,23 @@
+{
+  "name": "casualui",
+  "version": "1.0.0",
+  "description": "A style framework for casual and clean user interfaces",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass":"node-sass -w src/style/main.scss src/style/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stopaalex/casualUI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stopaalex/casualUI/issues"
+  },
+  "homepage": "https://github.com/stopaalex/casualUI#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

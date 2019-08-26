@@ -1,0 +1,39 @@
+@import 'variables.scss';
+
+.cui-container {
+    display: flex;
+    flex-direction: column;
+    padding: .5em;
+    margin: .5em;
+
+    &.text {
+        margin: .05em 0.25em;
+        padding: .05em 0.25em;
+    }
+
+    &.border-black {
+        border: 1px solid #000000;
+    }
+    &.border-grey {
+        border: 1px solid #CCCCCC;
+    }
+    &.border-white {
+        border: 1px solid #FFFFFF;
+    }
+
+    &.horizontal {
+        flex-direction: row;
+    }
+
+    &.left {
+        justify-content: flex-start;
+    }
+    
+    &.center {
+        justify-content:center;
+    }
+
+    &.right {
+        justify-content: flex-end;
+    }
+}
