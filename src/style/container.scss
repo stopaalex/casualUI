@@ -21,6 +21,19 @@
         border: 1px solid #FFFFFF;
     }
 
+    &.vertical {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &.left {
+            align-items: flex-start;
+        }
+        &.right {
+            align-items: flex-end;
+        }
+    }
+
     &.horizontal {
         display: flex;
         flex-direction: row;
