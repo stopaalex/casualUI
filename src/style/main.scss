@@ -5,8 +5,18 @@
 @import 'container.scss';
 
 @import 'header.scss';
+
+@import 'wrapper.scss';
+
+@import 'tooltip.scss';
+
+@import 'spacer.scss';
  
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 16px;
+}
+
+body {
+    margin: 0;
 }

@@ -1,0 +1,146 @@
+@import 'variables.scss';
+
+.cui-tooltip {
+    position: absolute;
+    padding: .5em;
+    cursor: pointer;
+    
+    &.right {
+        right: 0;
+    }
+
+    &.left {
+        left: 0;
+    }
+
+    &.top-right {
+        right: 0;
+        top: 0;
+    }
+    
+    &.bottom-right {
+        right: 0;
+        top: 100%;
+    }
+
+    &.top-left {
+        left: 0;
+        top: 0;
+    }
+
+    &.tbottomleft {
+        left: 0;
+        top: 100%;
+    }
+
+    &.right {
+        .popout {
+            right: calc(100%);
+            top: 0;
+        }
+    }
+    &.left {
+        .popout {
+            left: calc(100%);
+            top: 0;
+        }
+    }
+    &.bottom {
+        .popout {
+            right: calc(100% - 100px);
+            top: 100%;
+        }
+    }
+
+    &.small {
+        .popout {
+            width: 100px;
+        }
+        &.right {
+            .popout {
+                right: calc(100%);
+                top: 0;
+            }
+        }
+        &.left {
+            .popout {
+                left: calc(100%);
+                top: 0;
+            }
+        }
+        &.bottom {
+            .popout {
+                right: calc(100% - 50px);
+                top: 100%;
+            }
+        }
+    }
+    
+    &.medium {
+        .popout {
+            width: 200px;
+        }
+        &.right {
+            .popout {
+                right: calc(100%);
+                top: 0;
+            }
+        }
+        &.left {
+            .popout {
+                left: calc(100%);
+                top: 0;
+            }
+        }
+        &.bottom {
+            .popout {
+                right: calc(100% - 100px);
+                top: 100%;
+            }
+        }
+    }
+    
+    &.large {
+        .popout {
+            width: 300px;
+        }
+        &.right {
+            .popout {
+                right: calc(100%);
+                top: 0;
+            }
+        }
+        &.left {
+            .popout {
+                left: calc(100%);
+                top: 0;
+            }
+        }
+        &.bottom {
+            .popout {
+                right: calc(100% - 150px);
+                top: 100%;
+            }
+        }
+
+    }
+
+    .popout {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        width: 200px;
+        background: #ffffff;
+        box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+        padding: .5em;;
+        font-size: 0.85em
+
+    }
+
+    &:hover {
+        
+        .popout {
+            display: block;
+        }
+    }
+}

@@ -1,13 +1,12 @@
 @import 'variables.scss';
 
 .cui-container {
-    // display: flex;
-    // flex-direction: column;
     padding: .5em;
     margin: .5em;
+    position: relative;
 
     &.text {
-        margin: .05em 0.25em;
+        margin: .05em 0.25em 0.4em 0.25em;
         padding: .05em 0.25em;
     }
 

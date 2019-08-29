@@ -2,8 +2,9 @@
 
 var myApp = angular.module('myApp', [
     'ngRoute',
-    'cuiButton',
-    'cuiContainer'
+    'cuiWrapper',
+    'cuiContainer',
+    'cuiButton'
 ]);
 
 myApp.controller('myAppCtrl', function($scope, $rootScope) {
@@ -12,19 +13,19 @@ myApp.controller('myAppCtrl', function($scope, $rootScope) {
 
 });
 
-var cuiButton = angular.module('cuiButton', [])
-.directive('cuiButton', function() {
+var cuiWrapper = angular.module('cuiWrapper', [])
+.directive('cuiWrapper', function() {
     return {
         link: function(scope, element, attrs) {
-            scope.buttonHTML = function() {
-                return 'templates/button.template.html';
+            scope.wrapperHTML = function() {
+                return 'templates/wrapper.template.html';
             }
         },
         restrict: 'A',
-        template: '<div ng-include="buttonHTML()"></div>'
+        template: '<div ng-include="wrapperHTML()"></div>'
     }
 })
-.controller('cuiButtonCtrl', function($scope, $rootScope) {});
+.controller('cuiWrapperCtrl', function($scope, $rootScope) {});
 
 var cuiContainer = angular.module('cuiContainer', [])
 .directive('cuiContainer', function() {
@@ -39,3 +40,17 @@ var cuiContainer = angular.module('cuiContainer', [])
     }
 })
 .controller('cuiContainerCtrl', function($scope, $rootScope) {});
+
+var cuiButton = angular.module('cuiButton', [])
+.directive('cuiButton', function() {
+    return {
+        link: function(scope, element, attrs) {
+            scope.buttonHTML = function() {
+                return 'templates/button.template.html';
+            }
+        },
+        restrict: 'A',
+        template: '<div ng-include="buttonHTML()"></div>'
+    }
+})
+.controller('cuiButtonCtrl', function($scope, $rootScope) {});

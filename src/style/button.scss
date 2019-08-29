@@ -11,6 +11,14 @@ button.cui-button {
     background: $primary-color;
     color: set-text-color($primary-color);
 
+    &.disabled {
+        pointer-events: none;
+        user-select: none;
+        cursor: not-allowed;
+        background: darken($primary-color, 10%);
+        opacity: 0.3;
+    }
+
     &::after {
         content: '';
         position: absolute;
