@@ -207,6 +207,43 @@ button.cui-button {
   .cui-spacer.white {
     background: #ffffff; }
 
+.cui-input {
+  position: relative;
+  margin: .5em; }
+  .cui-input.rounded input {
+    border-radius: 4px; }
+  .cui-input input {
+    padding: .5em 1em;
+    outline: none;
+    border: 1px solid #c5c5c5; }
+  .cui-input label {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 10px;
+    border-radius: 4px;
+    transition: 250ms;
+    pointer-events: none; }
+  .cui-input input:focus ~ label,
+  .cui-input input:valid ~ label {
+    top: calc(0% - 6px);
+    font-size: 0.75em;
+    color: #999999;
+    padding: 2px;
+    background: #FFFFFF; }
+
+.cui-dropdown {
+  position: relative;
+  margin: .5em; }
+  .cui-dropdown select {
+    padding: .5em;
+    cursor: pointer;
+    border: 1px solid #c5c5c5; }
+  .cui-dropdown label {
+    padding: calc(.5em + 1px);
+    border: 1px solid #c5c5c5;
+    background: #ffffff;
+    margin-right: -6px; }
+
 * {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 16px; }

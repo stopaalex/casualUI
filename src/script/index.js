@@ -4,7 +4,8 @@ var myApp = angular.module('myApp', [
     'ngRoute',
     'cuiWrapper',
     'cuiContainer',
-    'cuiButton'
+    'cuiButton',
+    'cuiInputs'
 ]);
 
 myApp.controller('myAppCtrl', function($scope, $rootScope) {
@@ -54,3 +55,17 @@ var cuiButton = angular.module('cuiButton', [])
     }
 })
 .controller('cuiButtonCtrl', function($scope, $rootScope) {});
+
+var cuiInputs = angular.module('cuiInputs', [])
+.directive('cuiInputs', function() {
+    return {
+        link: function(scope, element, attrs) {
+            scope.inputsHTML = function() {
+                return 'templates/inputs.template.html';
+            }
+        },
+        restrict: 'A',
+        template: '<div ng-include="inputsHTML()"></div>'
+    }
+})
+.controller('cuiInputsCtrl', function($scope, $rootScope) {});
